@@ -1,9 +1,7 @@
 import { Response } from "https://deno.land/x/oak/mod.ts";
 
 export const helloWorld = ({ response }: { response: Response }) => {
-  response.body = {
-    message: "Hello World!",
-  };
+  response.body = "Hello World!\n";
 };
 
 export const calculateFizzBuzz = (
@@ -22,7 +20,5 @@ export const calculateFizzBuzz = (
     message = input.toString();
   }
 
-  response.body = {
-    message,
-  };
+  response.body = message + "\n";
 };
